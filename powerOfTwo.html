@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Power of two</title>
+  </head>
+  <body>
+    <script>
+      // Solution 1
+      // --------------------------------
+      //   const isPowerOfTwo = (n) => {
+      //     if (n < 1) {
+      //       return false;
+      //     }
+      //     while (n > 1) {
+      //       if (n % 2 !== 0) {
+      //         return false;
+      //       }
+      //       n = n / 2;
+      //     }
+      //     return true;
+      //   };
+
+      //   console.log(isPowerOfTwo(1)); // true
+      //   console.log(isPowerOfTwo(2)); // true
+      //   console.log(isPowerOfTwo(3)); // false
+      //   console.log(isPowerOfTwo(5)); // false
+
+      // Big-O = Linear O(n)
+
+      // Solution 2
+      // --------------------------------
+      const isPowerOfTwoBitWise = (n) => {
+        if (n < 1) {
+          return false;
+        }
+        return (n & (n - 1)) === 0;
+      };
+
+      console.log(isPowerOfTwoBitWise(1)); // true
+      console.log(isPowerOfTwoBitWise(2)); // true
+      console.log(isPowerOfTwoBitWise(3)); // false
+      console.log(isPowerOfTwoBitWise(5)); // false
+
+      // Big-O = Constant O(1)
+    </script>
+  </body>
+</html>

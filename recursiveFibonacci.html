@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursive Fibonacci</title>
+  </head>
+  <body>
+    <script>
+      const recursiveFibonacci = (n) => {
+        debugger
+        if (n < 2) {
+          return n;
+        }
+        return recursiveFibonacci(n - 1) + recursiveFibonacci(n - 2);
+      };
+
+      console.log(recursiveFibonacci(0)); // 0
+      console.log(recursiveFibonacci(1)); // 1
+      console.log(recursiveFibonacci(6)); // 8
+
+      // Time Complexity
+      // Big-O = O(2^n) Recursive
+      // Recursion is not good for fibonacci problem solution
+    </script>
+  </body>
+</html>
