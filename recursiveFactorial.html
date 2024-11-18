@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recursive Factorial</title>
+  </head>
+  <body>
+    <script>
+      const recursiveFactorial = (n) => {
+        if (n === 0) {
+          return 1;
+        }
+        return n * recursiveFactorial(n - 1);
+      };
+
+      console.log(recursiveFactorial(0)); // 1
+      console.log(recursiveFactorial(1)); // 1
+      console.log(recursiveFactorial(5)); // 120
+      console.log(recursiveFactorial(6)); // 720
+
+      // Time Complexity
+      // Big-O = O(n) Linear
+    </script>
+  </body>
+</html>
